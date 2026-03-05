@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <div class="card feedback-card">
+        <div class="icon-header">✉️</div>
+        <h1>ส่งข้อความลับถึงเรา</h1>
+        <p class="subtitle">พื้นที่ปลอดภัยสำหรับทุกความเห็น ไม่ระบุตัวตน 100%</p>
+        
+        <div class="input-group">
+            <textarea id="feedbackInput" placeholder="พิมพ์ความในใจที่คุณอยากบอก..."></textarea>
+        </div>
+
+        <button onclick="sendFeedback()" class="btn-send">
+            <span>ส่งความเห็น</span>
+            <span class="btn-icon"></span>
+        </button>
+
+        <div class="footer-links">
+            <a href="login.html" class="admin-link">Admin Access</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
