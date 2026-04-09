@@ -1,40 +1,53 @@
-admin.html
-
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body class="admin-body">
-    <script src="script.js"></script>
-    <script>protectPage();</script>
 
-    <div class="card admin-card">
-        <div class="admin-header">
-            <h1>รายการข้อความ 📂</h1>
-            <button onclick="logout()" class="btn-logout">ออกจากระบบ</button>
-        </div>
-        
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>วัน-เวลา</th>
-                        <th>ข้อความ</th>
-                        <th>จัดการ</th>
-                    </tr>
-                </thead>
-                <tbody id="adminList"></tbody>
-            </table>
-        </div>
-        <a href="index.html" class="admin-link">← กลับหน้าส่งข้อความ</a>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-body">
+
+<script src="script.js"></script>
+<script>protectPage();</script>
+
+<div class="card admin-card">
+
+    <!-- HEADER -->
+    <div class="admin-header">
+        <h1>📂 จัดการ Feedback</h1>
+        <button onclick="logout()" class="btn-logout">ออกจากระบบ</button>
     </div>
 
-    <script>renderAdminTable();</script>
+    <!-- TABLE -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>วัน-เวลา</th>
+                    <th>ข้อความ</th>
+                    <th>จัดการ</th>
+                </tr>
+            </thead>
+            <tbody id="adminList"></tbody>
+        </table>
+    </div>
+
+    <!-- AUDIT LOG -->
+    <div style="margin-top:30px; text-align:left;">
+        <h2>🧾 ประวัติการจัดการ (Audit Log)</h2>
+        <ul id="logList" style="font-size:0.9rem; color:#555;"></ul>
+    </div>
+
+    <a href="index.html" class="admin-link">← กลับหน้าส่งข้อความ</a>
+</div>
+
+<script>
+renderAdminTable();
+renderLogs();
+</script>
+
 </body>
 </html>
